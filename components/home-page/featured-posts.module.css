@@ -1,6 +1,7 @@
 /* these files are accoring to next. filename.module.css
 variable used here are extracted from global.css. these are defined there
 advantages of using variables. change in one file(means global.css ) and reflect everywhere
+advantage of using module.css -> if same classnames used in anyother compnent they both will not conflict bcz they are scopped to their files only
 */
 
 .latest {
