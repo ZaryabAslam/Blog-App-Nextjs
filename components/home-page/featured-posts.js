@@ -1,4 +1,4 @@
-import PostGrid from "../posts/post-grid";
+import PostsGrid from "../posts/posts-grid";
 import classes from './featured-posts.module.css';
 
 function FeaturedPosts(props){
@@ -7,7 +7,7 @@ function FeaturedPosts(props){
             featured post
         </h2>
         {/* passing props get from home page to postgrid */}
-        <PostGrid posts={props.posts} />
+        <PostsGrid posts={props.posts} />
     </section>
 }
 
