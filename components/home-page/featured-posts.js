@@ -6,6 +6,7 @@ function FeaturedPosts(props){
         <h2>
             featured post
         </h2>
+        {/* passing props get from home page to postgrid */}
         <PostGrid posts={props.posts} />
     </section>
 }

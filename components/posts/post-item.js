@@ -3,6 +3,7 @@ import classes from './post-item.module.css';
 import Image from 'next/image';
 
 function PostItem(props){
+    //reciving props from postgrid
     //slug => unique identifier of the post
     // date => not formatted
     //image => image name
