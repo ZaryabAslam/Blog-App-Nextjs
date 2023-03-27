@@ -1,13 +1,10 @@
-import { Fragment } from "react";
+import PostContent from '../../components/posts/post-detail/post-content';
 
 
 // this is particular post page
-function PostDetailsPage(){
-    return (
-        <Fragment>
-            <h1>this is post details page</h1>
-        </Fragment>
-    )
-}
+function PostDetailPage() {
+    //this post content is content for a single post on pdp page
+    return <PostContent />
+  }
 
-export default PostDetailsPage;
+export default PostDetailPage;
