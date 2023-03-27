@@ -1,3 +1,6 @@
+
+// for using markdown command to install -> npm install react-markdown
+import ReactMarkdown from 'react-markdown';
 import PostHeader from './post-header';
 import classes from './post-content.module.css';
 
@@ -8,6 +11,7 @@ const DUMMY_POST = {
   date: '2022-02-10',
   content: '# This is a first post',
 };
+
 //in conttent it is markdown and refered as title (anythung written with hash sign)
 //this page is pagecontent for a single post(which pdp u can say in dynamics world)
 function PostContent() {
@@ -17,7 +21,8 @@ function PostContent() {
     <article className={classes.content}>
         {/* this is shown as top of pdp below navbar. it contains image and title of post */}
       <PostHeader title={DUMMY_POST.title} image={imagePath} />
-      {DUMMY_POST.content}
+      {/* // now .content which is rapped in markdown will be served as H1 , bcz in markdown # IS H1. we using it to reduce code */}
+      <ReactMarkdown>{DUMMY_POST.content}</ReactMarkdown>
     </article>
   );
 }
