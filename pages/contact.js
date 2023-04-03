@@ -1,13 +1,9 @@
-import { Fragment } from "react";
+import ContactForm from '../components/contact/contact-form';
 
 
 
-function Contact(){
-    return (
-        <Fragment>
-            <h1>this is Contact page</h1>
-        </Fragment>
-    )
-}
+function ContactPage() {
+    return <ContactForm />;
+  }
 
-export default Contact;
+export default ContactPage;
