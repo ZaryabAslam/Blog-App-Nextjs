@@ -4,6 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import PostHeader from './post-header';
 import classes from './post-content.module.css';
 import Image from 'next/image';
+//npm install react-syntax-highligher. for higlighting code better. na b karo to koe farq nae just for good visuals
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 // const DUMMY_POST = {
 //   slug: 'getting-started-with-nextjs',
@@ -56,6 +59,19 @@ function PostContent(props) {
 
       return <p>{paragraph.children}</p>;
     },
+    //code is also same as we use p above. it is a rule mentioed by markdown in their github
+      code(code) {
+        //ismy humy classname aur children milega. children main code hoiga aur classname sy hum language nikal dengy
+        const { className, children } = code;
+        const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
+        return (
+          <SyntaxHighlighter
+            style={atomDark}
+            language={language}
+            children={children}
+          />
+        );
+      }
   };
 
 
