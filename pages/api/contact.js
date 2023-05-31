@@ -1,4 +1,5 @@
 // npm install mongodb
+// using mongodb to store form data
 import { MongoClient } from "mongodb";
 
 //this is api route and will be api/contact
