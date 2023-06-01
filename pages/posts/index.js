@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import AllPosts from '../../components/posts/all-posts';
 import { getAllPosts } from "../../lib/post-util";
 import Head from 'next/head';
-import { Fragment } from 'react';
 
 // const DUMMY_POSTS = [
 //   {
