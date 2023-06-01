@@ -1,11 +1,21 @@
 import PostContent from '../../components/posts/post-detail/post-content';
 import { getPostsFiles, getPostData } from '../../lib/post-util';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
 
 // this is particular post page
 function PostDetailPage(props) {
     //this post content is content for a single post on pdp page
-    return <PostContent post={props.post} />;
+    return (
+      <Fragment>
+        <Head>
+          <title>{props.post.title}</title>
+          <meta name='description' content={props.post.excerpt} />
+        </Head>
+        <PostContent post={props.post} />
+      </Fragment>
+    );
   }
 
   export function getStaticProps(context) {

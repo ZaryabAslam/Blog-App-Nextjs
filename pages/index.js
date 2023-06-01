@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Hero from '../components/home-page/hero';
 import FeaturedPosts from '../components/home-page/featured-posts';
 import { getFeaturedPosts } from "../lib/post-util";
+import Head from 'next/head';
 
 // home page where heros section and featured posts will be shown
 //dummy data for posts to be passed to featured posts
@@ -44,6 +45,13 @@ import { getFeaturedPosts } from "../lib/post-util";
 function HomePage(props){
     return (
         <Fragment>
+          <Head>
+        <title>Max' Blog</title>
+        <meta
+          name='description'
+          content='I post about programming and web development.'
+        />
+      </Head>
             <Hero />
             {/* we used dummyposts earlier now we will use props get from static props */}
             {/* <FeaturedPosts posts={DUMMY_POSTS} /> */}
