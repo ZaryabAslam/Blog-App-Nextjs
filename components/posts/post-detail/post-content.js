@@ -5,8 +5,11 @@ import PostHeader from './post-header';
 import classes from './post-content.module.css';
 import Image from 'next/image';
 //npm install react-syntax-highligher. for higlighting code better. na b karo to koe farq nae just for good visuals
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+// manipulating imports(seen from thier github). as size of previous imports were too large 
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 
 // const DUMMY_POST = {
 //   slug: 'getting-started-with-nextjs',
@@ -16,6 +19,9 @@ import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 //   content: '# This is a first post',
 // };
 
+// when importing explictily, these needs to be registered
+SyntaxHighlighter.registerLanguage('js', js);
+SyntaxHighlighter.registerLanguage('css', css);
 //in conttent it is markdown and refered as title (anythung written with hash sign)
 //this page is pagecontent for a single post(which pdp u can say in dynamics world)
 function PostContent(props) {
